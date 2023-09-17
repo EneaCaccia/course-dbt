@@ -128,6 +128,6 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-delivery-update.sh
-gitpod
-pgui.sh
+./delivery-update.sh
+./gitpod
+./pgui.sh
