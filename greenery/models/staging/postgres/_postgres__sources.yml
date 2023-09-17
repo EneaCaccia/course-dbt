@@ -1,0 +1,35 @@
+version: 2
+
+sources:
+
+  - name: postgres # name of the source (this can be named whatever you want, but should be descriptive. this source (superheroes) is used for our week 1 tutorial so thats why i named it this way)
+    schema: public # this is the schema our raw data lives in
+    database: raw # this is the name of the database that our source data lives in
+
+    quoting:
+      database: false
+      schema: false
+      identifier: false
+
+    tables:
+      - name: events
+        description: "events source table"
+        
+      - name: order_items
+        description: "order_items source table"
+        
+      - name: promos
+        description: "promos source table"
+        
+      - name: orders
+        description: "orders source table"
+        
+      - name: addresses
+        description: "addresses source table"
+        
+      - name: products
+        description: "products source table"
+        
+      - name: users
+        description: "users source table"
+        
