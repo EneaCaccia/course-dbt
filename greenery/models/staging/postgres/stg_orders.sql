@@ -8,6 +8,7 @@ renamed as (
         promo_id,
         address_id,
         created_at as created_at_utc,
+        
         order_cost,
         shipping_cost,
         order_total as order_total_cost,

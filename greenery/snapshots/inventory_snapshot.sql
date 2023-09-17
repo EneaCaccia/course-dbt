@@ -10,6 +10,6 @@
     )
     }}
 
-  SELECT * FROM {{ source('postgres', 'inventory') }}
+  SELECT * FROM {{ source('postgres', 'products') }}
 
 {% endsnapshot %}
