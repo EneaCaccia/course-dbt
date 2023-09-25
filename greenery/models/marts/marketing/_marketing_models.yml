@@ -1,0 +1,41 @@
+version: 2
+
+models:
+  - name: fact_session_info
+    description: "This view contains statistics about user navigation sessions such as duration, page views and additions to cart"
+    columns:
+      - name: session_id
+        description: ""
+        tests:
+        - unique
+        - not_null
+
+      - name: user_id
+        description: ""
+        tests:
+        - not_null
+
+      - name: checkout
+        description: ""
+        tests:
+        - not_null
+
+      - name: package_shipped
+        description: ""
+        tests:
+        - not_null
+
+      - name: add_to_cart
+        description: ""
+        tests:
+        - not_null
+
+      - name: page_view
+        description: ""
+        tests:
+        - not_null
+
+      - name: session_duration
+        description: ""
+        tests:
+        - not_null

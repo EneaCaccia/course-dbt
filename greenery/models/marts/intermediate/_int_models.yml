@@ -1,0 +1,58 @@
+version: 2
+
+models:
+  - name: int_product_session
+    description: "Intermediate table with full product and session granularity. This is used as a basis for aggregation for product and marketing models"
+    columns:
+      - name: session_id
+        description: ""
+        tests:
+        - unique
+        - not_null
+
+      - name: user_id
+        description: ""
+        tests:
+        - not_null
+
+      - name: tgt_product_id
+        description: ""
+
+      - name: page_view
+        description: ""
+
+      - name: add_to_cart
+        description: ""
+
+      - name: checkout
+        description: ""
+
+      - name: package_shipped
+        description: ""
+
+  - name: int_session_duration
+    description: ""
+    columns:
+      - name: session_id
+        description: ""
+        tests:
+        - unique
+        - not_null
+
+      - name: session_start
+        description: ""
+
+      - name: session_end
+        description: ""
+
+      - name: session_duration
+        description: ""
+
+  - name: int_session_events
+    description: ""
+    columns:
+      - name: events
+        description: ""
+        tests:
+        - unique
+        - not_null

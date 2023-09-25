@@ -1,3 +1,3 @@
-# Greenery course project
+# Greenery
 
 Sample DBT project

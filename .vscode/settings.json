@@ -1,0 +1,25 @@
+{
+    "sqltools.connections": [
+        {
+            "authenticator": "SNOWFLAKE",
+            "ocspOptions": {
+                "ocspFailOpen": true
+            },
+            "snowflakeOptions": {
+                "clientSessionKeepAlive": true,
+                "clientSessionKeepAliveHeartbeatFrequency": 3600,
+                "schema": "DBT_ENEA",
+                "role": "TRANSFORMER_DEV"
+            },
+            "previewLimit": 50,
+            "driver": "Snowflake",
+            "name": "Snowflake",
+            "account": "ryb00700.us-east-1",
+            "username": "toolseneacacciagmailcom",
+            "password": "Kleslie@949",
+            "database": "DEV_DB",
+            "warehouse": "TRANSFORMER_DEV_WH"
+        }
+    ],
+    "dbt.queryLimit": 500
+}
