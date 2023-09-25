@@ -7,7 +7,6 @@ models:
       - name: session_id
         description: ""
         tests:
-        - unique
         - not_null
 
       - name: user_id

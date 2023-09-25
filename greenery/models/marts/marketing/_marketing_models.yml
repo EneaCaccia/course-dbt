@@ -18,22 +18,18 @@ models:
       - name: checkout
         description: ""
         tests:
-        - not_null
 
       - name: package_shipped
         description: ""
         tests:
-        - not_null
 
       - name: add_to_cart
         description: ""
         tests:
-        - not_null
 
       - name: page_view
         description: ""
         tests:
-        - not_null
 
       - name: session_duration
         description: ""

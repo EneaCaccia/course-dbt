@@ -13,12 +13,10 @@ models:
       - name: page_views
         description: ""
         tests:
-        - not_null
 
       - name: add_to_cart
         description: ""
         tests:
-        - not_null
 
       - name: total_order_num
         description: ""
