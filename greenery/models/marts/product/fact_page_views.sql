@@ -4,6 +4,7 @@ with product_views as (
         sum("page_view") as page_views,
         sum("add_to_cart") as add_to_cart
     from {{ ref("int_product_session") }}
+    where tgt_product_id is not null
     group by all
 ),
 
