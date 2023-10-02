@@ -1,24 +1,21 @@
-with product_views as (
-    select 
-        tgt_product_id product_id,
-        sum("page_view") as page_views,
-        sum("add_to_cart") as add_to_cart
-    from {{ ref("int_product_session") }}
-    where tgt_product_id is not null
-    group by all
-),
+{% set event_types = dbt_utils.get_column_values(
+    table = ref('stg_events'), 
+    column = 'event_type'
+) %}
 
-orders as (
-    select product_id, sum(order_quantity) total_order_num from {{ ref("stg_order_items") }}
-    group by all
-)
-
-select  
-    a.product_id, 
-    page_views,
-    add_to_cart,
-    total_order_num,
-    round(add_to_cart/nullif(page_views, 0), 3) view_conversions,
-    round(add_to_cart/nullif(total_order_num, 0), 3) cart_conversions
-from product_views a
-left join orders b on a.product_id = b.product_id
+select
+    e.session_id,
+    e.user_id,
+    coalesce(e.tgt_product_id, oi.product_id) as product_id,
+    session_start,
+    session_end,
+    {%- for event_type in event_types %}
+    {{ case_sum('e.event_type', event_type) }} as {{ event_type }}s,
+    {%- endfor %}
+    s.session_duration_minutes
+from {{ ref('stg_events') }} e
+left join {{ ref('stg_order_items') }} oi
+    on oi.order_id = e.tgt_order_id
+left join {{ ref('int_session_duration') }} s
+    on s.session_id = e.session_id
+group by all

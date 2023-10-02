@@ -1,0 +1,10 @@
+version: 2
+
+macros:
+  - name: case_sum
+    description: a macro to create case statements where each case is summed
+    arguments:
+      - name: col_name
+        type: string
+      - name: col_value
+        type: list of strings

@@ -8,23 +8,3 @@ models:
         description: ""
         tests:
         - not_null
-        - unique
-
-      - name: page_views
-        description: ""
-        tests:
-
-      - name: add_to_cart
-        description: ""
-        tests:
-
-      - name: total_order_num
-        description: ""
-        tests:
-        - not_null
-
-      - name: view_conversions
-        description: "Ratio of page views over product added to cart, for each product"
-
-      - name: cart_conversions
-        description: "Ratio of additions to cart over total product orders"
