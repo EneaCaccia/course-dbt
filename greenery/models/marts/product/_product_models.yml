@@ -8,3 +8,8 @@ models:
         description: ""
         tests:
         - not_null
+
+  - name: conversion_by_product
+  - name: fact_funnel_by_session_product
+  - name: fact_funnel_by_session
+  - name: report_funnel
