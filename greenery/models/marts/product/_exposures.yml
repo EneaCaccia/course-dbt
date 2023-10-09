@@ -1,0 +1,15 @@
+version: 2
+
+exposures:  
+  - name: Product Funnel Dashboard
+    description: >
+      Totally immaginary dashboard
+    type: dashboard
+    maturity: high
+    url: https://media3.giphy.com/media/V4NSR1NG2p0KeJJyr5/giphy.gif?cid=ecf05e47l8ceuw5e8z3aijhbnjoo1ecgi5qeazrpe9a21wcm&ep=v1_gifs_search&rid=giphy.gif&ct=g
+    owner:
+      name: Me
+      email: me@greenery.com
+    depends_on:
+      - ref('fact_funnel_by_product')
+      - ref('dim_products')

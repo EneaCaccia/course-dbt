@@ -10,6 +10,5 @@ models:
         - not_null
 
   - name: conversion_by_product
-  - name: fact_funnel_by_session_product
-  - name: fact_funnel_by_session
+  - name: fact_funnel_by_product
   - name: report_funnel
